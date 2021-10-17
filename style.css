@@ -25,7 +25,7 @@ body {
 }
 
 h1 {
-    margin: 2rem 0 0;
+    margin: 2rem 0;
 }
 
 .game-container {
@@ -81,4 +81,56 @@ h1 {
     margin: 0 .3rem;
     height: 5rem;
     width: 2rem;
+}
+
+.popup-container {
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*display: flex;*/
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup {
+    background: #2980b9;
+    border-radius: .5rem;
+    box-shadow: 0 1.5rem 1rem .3rem rgba(0, 0, 0, .1);
+    padding: 2rem;
+    text-align: center;
+}
+
+.popup button {
+    cursor: pointer;
+    background: #fff;
+    color: #2980b9;
+    border: 0;
+    margin-top: 2rem;
+    padding: 1.2rem 2rem;
+    font-size: 1.6rem;
+}
+
+.popup button:active {
+    transform: scale(0.98);
+}
+
+.popup button:focus {
+    outline: none;
+}
+
+.notification-container {
+    background: rgba(0, 0, 0, .3);
+    border-radius: 1rem 1rem 0 0;
+    padding: 1.5rem 2rem;
+    position: absolute;
+    bottom: -5rem;
+    transition: transform .3s ease-in-out;
+}
+
+.notification-container.show {
+    transform: translateY(-5rem);
 }
